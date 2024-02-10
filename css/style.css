@@ -1,0 +1,180 @@
+@font-face {
+  font-family: Gilroy;
+  font-weight: 600;
+  src: url(/font/Gilroy-Semibold.ttf);
+}
+@font-face {
+  font-family: Gilroy;
+  font-weight: 500;
+  src: url(/font/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: Gilroy;
+  font-weight: 400;
+  src: url(/font/Gilroy-Regular.ttf);
+}
+@font-face {
+  font-family: Neuzeit;
+  font-weight: 500;
+  src: url(/font/NeuzeitGro-Reg.ttf);
+}
+@font-face {
+  font-family: Neuzeit;
+  font-weight: 700;
+  src: url(/font/NeuzeitGro-Bol.ttf);
+}
+body {
+  --dark: #0B0B0B;
+  --light: #FFFFFF;
+  background-color: var(--main-background);
+  color: var(--main-font);
+  overflow-x: hidden;
+  max-width: 100%;
+  -webkit-text-size-adjust: none;
+  font-size: 10px;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 12px;
+  box-sizing: content-box;
+}
+
+.banner {
+  background: linear-gradient(106.17deg, rgb(105, 177, 201) 0.132%, rgb(96, 129, 195) 50.675%, rgb(85, 88, 175) 99.946%);
+}
+
+.banner__text {
+  width: 100%;
+  margin: 10px 0;
+  color: var(--light);
+  font-family: Gilroy, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+}
+
+.header {
+  padding-top: 16px;
+  background-color: var(--dark);
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__link {
+  color: var(--light);
+  opacity: 0.7;
+  font-family: Gilroy;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.about {
+  background-repeat: no-repeat;
+  background-color: var(--dark);
+  background-image: url(/img/studiobudsplus-pdp-p04-hevc.mp4.rendition\ 1.png);
+}
+
+.about__wrapper {
+  padding-top: 40px;
+}
+
+.about__title {
+  font-family: Neuzeit;
+  font-weight: 700;
+  color: var(--light);
+  font-size: 32px;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+.about__text {
+  color: rgb(255, 255, 255);
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+
+.about__prices {
+  background: linear-gradient(181.2deg, rgba(11, 11, 11, 0.4) 1.01%, rgba(11, 11, 11, 0) 98.98%), linear-gradient(29.22deg, rgba(255, 255, 255, 0.11) 5.35%, rgba(255, 255, 255, 0.205) 91.84%);
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--light);
+  padding: 0 12px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.about__price--old {
+  font-family: Neuzeit;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  text-decoration-line: line-through;
+  text-transform: capitalize;
+}
+
+.about__price {
+  font-family: Neuzeit;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+.about__cards {
+  margin-top: 186px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 33% 1 0;
+  color: var(--light);
+  gap: 4px;
+}
+
+.about__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0.163%, rgba(255, 255, 255, 0) 88.856%);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.158);
+  padding: 10px;
+  min-height: 118px;
+}
+
+.card-about__text {
+  color: var(--light);
+  font-family: Gilroy;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: center;
+  white-space: nowrap;
+}/*# sourceMappingURL=style.css.map */
