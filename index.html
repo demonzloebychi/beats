@@ -15,7 +15,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
 <link href="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 " rel="stylesheet">
-    
+
     <title>Document</title>
 </head>
 <body>
@@ -443,17 +443,30 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 </p>
 
                 <div class="product__colors">
-                    <div style="background: rgb(173, 172, 177);" class="product__color is-active" data-tab-name="color-1">
-
+                    <div class="product__color is-active" data-tab-name="color-1">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="34" height="34" rx="17" fill="#ADACB1"/>
+                            </svg>
+                            
                     </div>
-                    <div style="background: rgb(40, 40, 40);" class="product__color" data-tab-name="color-2">
-
+                    <div class="product__color" data-tab-name="color-2">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="34" height="34" rx="17" fill="#282828"/>
+                            </svg>
+                            
+                            
                     </div>
-                    <div style="background: rgb(236, 170, 167);" class="product__color" data-tab-name="color-3">
- 
+                    <div class="product__color" data-tab-name="color-3">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="34" height="34" rx="17" fill="#ECAAA7"/>
+                            </svg>
+                            
                     </div>
-                    <div style="background: rgb(236, 229, 221);" class="product__color" data-tab-name="color-4">
-
+                    <div class="product__color" data-tab-name="color-4">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="34" height="34" rx="17" fill="#ECE5DD"/>
+                            </svg>
+                            
                     </div>
                 </div>
                 <div class="products__btns">
@@ -477,8 +490,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <p class="products__discount--text">
                         Hurry up! Sale Ends in
                     </p>   
-                    <p class="products__discount--text-big timer">
-                        <span class="timer__item timer__days"></span>
+                    <p id="group" class="products__discount--text-big timer">
+                        <span id="hours" class="timer__item "></span>
+                        <span id="minutes" class="timer__item "></span>
+                        <span id="seconds" class="timer__item "></span>
                     </p>
                     
                 </div>
@@ -783,26 +798,103 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
 
         <section class="comments">
-            <div class="container">
+            <!-- <div class="container"> -->
                 <div class="comments__wrapper">
                     <h3 class="comments__title">
                         What the Experts are Saying
                     </h3>
 
-                    <section class="splide" aria-labelledby="carousel-heading">
-                        <h2 id="carousel-heading">Basic Structure Example</h2>
-                      
-                      
+
+                    <div id="commemts" class="splide" aria-labelledby="carousel-heading">
+                    
                         <div class="splide__track">
+                            <div class="splide__arrows splide__arrows--ltr">
+                                <button
+                                  class="splide__arrow splide__arrow--prev"
+                                  type="button"
+                                  aria-label="Previous slide"
+                                  aria-controls="splide01-track"
+                                >
+                                  
+                                </button>
+                                <button
+                                  class="splide__arrow splide__arrow--next"
+                                  type="button"
+                                  aria-label="Next slide"
+                                  aria-controls="splide01-track"
+                                >
+                                  
+                                </button>
+                              </div>
+
+
+
+
                               <ul class="splide__list">
-                                  <li class="splide__slide">Slide 01</li>
-                                  <li class="splide__slide">Slide 02</li>
-                                  <li class="splide__slide">Slide 03</li>
+                                  <li class="splide__slide">
+                                    <div class="comments__slide">
+                                        <p class="comments__text">
+                                            “These deliver superior audio experience across all frequency ranges.”
+                                        </p>
+                                        <div class="comments__bottom">
+                                            <svg width="36.000000" height="25.335449" viewBox="0 0 36 25.3354" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <defs/>
+                                                <path id="XMLID_823_" d="M34.5968 2.1748C33.2974 0.629883 30.8981 0 26.3161 0L9.68353 0C4.9967 0 2.55682 0.670898 1.26221 2.31543C0 3.91895 0 6.28174 0 9.55127L0 15.7842C0 22.1191 1.49762 25.3354 9.68353 25.3354L26.3162 25.3354C30.2897 25.3354 32.4915 24.7793 33.9159 23.416C35.3767 22.0181 36 19.7358 36 15.7842L36 9.55127C36 6.10303 35.9023 3.72656 34.5968 2.1748ZM23.1121 13.5283L15.5593 17.4756C15.3904 17.564 15.2058 17.6074 15.0214 17.6074C14.8126 17.6074 14.6042 17.5513 14.4197 17.4395C14.0723 17.229 13.8601 16.8525 13.8601 16.4463L13.8601 8.57715C13.8601 8.17139 14.0717 7.79492 14.4185 7.58447C14.7653 7.37402 15.1968 7.35938 15.5566 7.54639L23.1094 11.4683C23.4937 11.668 23.735 12.0645 23.7356 12.4976C23.7361 12.9307 23.4958 13.3276 23.1121 13.5283Z" fill="#FF0000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                            </svg>
+                                            <div class="comments__links">
+                                                @DailyTekk <br>
+Tech Reviewer
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                  </li>
+
+                                  <li class="splide__slide">
+                                    <div class="comments__slide">
+                                        <p class="comments__text">
+                                            “The noise cancellation on these earbuds is easily top tier.”
+                                        </p>
+                                        <div class="comments__bottom">
+                                            <svg width="36.000000" height="25.335449" viewBox="0 0 36 25.3354" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <defs/>
+                                                <path id="XMLID_823_" d="M34.5968 2.1748C33.2974 0.629883 30.8981 0 26.3161 0L9.68353 0C4.9967 0 2.55682 0.670898 1.26221 2.31543C0 3.91895 0 6.28174 0 9.55127L0 15.7842C0 22.1191 1.49762 25.3354 9.68353 25.3354L26.3162 25.3354C30.2897 25.3354 32.4915 24.7793 33.9159 23.416C35.3767 22.0181 36 19.7358 36 15.7842L36 9.55127C36 6.10303 35.9023 3.72656 34.5968 2.1748ZM23.1121 13.5283L15.5593 17.4756C15.3904 17.564 15.2058 17.6074 15.0214 17.6074C14.8126 17.6074 14.6042 17.5513 14.4197 17.4395C14.0723 17.229 13.8601 16.8525 13.8601 16.4463L13.8601 8.57715C13.8601 8.17139 14.0717 7.79492 14.4185 7.58447C14.7653 7.37402 15.1968 7.35938 15.5566 7.54639L23.1094 11.4683C23.4937 11.668 23.735 12.0645 23.7356 12.4976C23.7361 12.9307 23.4958 13.3276 23.1121 13.5283Z" fill="#FF0000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                            </svg>
+                                            <div class="comments__links">
+                                                @FlossyCarter <br>
+                                                Tech Reviewer
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                  </li>
+
+                                  <li class="splide__slide">
+                                    <div class="comments__slide">
+                                        <p class="comments__text">
+                                            “How do they sound on phone calls? These headphones sound great.”
+                                        </p>
+                                        <div class="comments__bottom">
+                                            <svg width="36.000000" height="25.335449" viewBox="0 0 36 25.3354" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <defs/>
+                                                <path id="XMLID_823_" d="M34.5968 2.1748C33.2974 0.629883 30.8981 0 26.3161 0L9.68353 0C4.9967 0 2.55682 0.670898 1.26221 2.31543C0 3.91895 0 6.28174 0 9.55127L0 15.7842C0 22.1191 1.49762 25.3354 9.68353 25.3354L26.3162 25.3354C30.2897 25.3354 32.4915 24.7793 33.9159 23.416C35.3767 22.0181 36 19.7358 36 15.7842L36 9.55127C36 6.10303 35.9023 3.72656 34.5968 2.1748ZM23.1121 13.5283L15.5593 17.4756C15.3904 17.564 15.2058 17.6074 15.0214 17.6074C14.8126 17.6074 14.6042 17.5513 14.4197 17.4395C14.0723 17.229 13.8601 16.8525 13.8601 16.4463L13.8601 8.57715C13.8601 8.17139 14.0717 7.79492 14.4185 7.58447C14.7653 7.37402 15.1968 7.35938 15.5566 7.54639L23.1094 11.4683C23.4937 11.668 23.735 12.0645 23.7356 12.4976C23.7361 12.9307 23.4958 13.3276 23.1121 13.5283Z" fill="#FF0000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                            </svg>
+                                            <div class="comments__links">
+                                                @PayetteForward <br>
+Tech Reviewer
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                  </li>
                               </ul>
+                              
                         </div>
-                      </section>
+                    </div>
+
+
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
 
 
@@ -814,9 +906,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </main>
 
 
-    <footer class="footer">
-
-    </footer>
     </div>
 
     <script src="/js/script.js"></script>

@@ -259,16 +259,20 @@ body {
   gap: clamp(10px, 2vw, 18px);
   margin-bottom: 12px;
 }
-.product__wrapper .product__color {
-  border-radius: 50%;
-  width: 34px;
-  height: 34px;
-  margin: 1px;
+.product__wrapper .product__color svg{
+  display: block;
+
+  /* width: fit-content;
+  height: fit-content; */
+ /*  width: 34px;
+  height: 34px; */
+  padding: 2px;
+
 }
-.product__wrapper .product__color .is-active {
-  padding: 5px;
-  border: 2px solid rgb(98, 98, 98);
+.product__wrapper .product__color.is-active {
   border-radius: 50%;
+  border: 1px solid rgb(98, 98, 98);
+
 }
 .product__wrapper .slider-list {
   display: none;
@@ -280,7 +284,7 @@ body {
 .product__wrapper .products__btns {
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: clamp(15px, 2.5vw, 34px);
 }
 .product__wrapper .product__btn {
   border-radius: 40px;
@@ -299,7 +303,7 @@ body {
   display: flex;
   align-items: center;
   gap: clamp(30px, 5vw, 55px);
-  margin-bottom: 12px;
+  margin-bottom: clamp(12px, 2vw, 34px);
 }
 .product__wrapper .products__discount--text {
   color: rgb(246, 93, 129);
@@ -317,8 +321,9 @@ body {
 }
 .product__wrapper .products__pays {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
+  gap: clamp(5px, 2vw, 25px)
 }
 
 @media (max-width: 375px) {
@@ -462,7 +467,9 @@ body {
   font-weight: 500;
   line-height: 130%;
 }
-
+.tasks{
+  margin-bottom: clamp(50px, 1vw, 70px);
+}
 .tasks .accordion {
   display: flex;
   flex-direction: column;
@@ -490,6 +497,8 @@ body {
   transition: all 0.5s ease 0s;
 }
 .tasks .accordion__title .text {
+  display: flex;
+  align-items: center;
   color: var(--dark-grey);
   font-family: Neuzeit;
   font-size: clamp(14px, 2.4vw, 20px);
@@ -511,8 +520,8 @@ body {
 .tasks .span-1 {
   position: absolute;
   z-index: 5;
-  top: 50%;
-  left: 8px;
+  top: 14px;
+  left: 7px;
   width: 16px;
   height: 2px;
   background-color: var(--light);
@@ -520,8 +529,8 @@ body {
 .tasks .span-2 {
   position: absolute;
   z-index: 5;
-  top: 8px;
-  left: 50%;
+  top: 7px;
+  left: 14px;
   width: 2px;
   height: 16px;
   background-color: var(--light);
@@ -604,6 +613,92 @@ body {
   transform: rotate(0deg);
 }
 
-.footer {
-  height: 100px;
-}/*# sourceMappingURL=style.css.map */
+
+
+.comments .comments__slide {
+  border: 1px solid rgb(242, 242, 242);
+  border-radius: 30px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.06);
+  background: rgb(255, 255, 255);
+  padding: 15px;
+}
+.comments .comments__bottom {
+  display: flex;
+  align-items: center;
+}
+
+.comments {
+  border-radius: 30px;
+  background: rgb(247, 247, 247);
+  padding: 15px 0 37px 0;
+  margin-bottom: 49px;
+}
+.comments__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+.comments__title {
+  color: var(--dark-grey);
+  font-family: Neuzeit;
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: 700;
+  line-height: 115%;
+  text-align: center;
+}
+.splide {
+  
+}
+.splide__track {
+}
+.splide__list {
+}
+.splide__slide {
+
+}
+.comments__slide {
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 30px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.06);
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    margin: 0 10px;
+}
+.comments__text {
+    color: var(--dark-grey);
+    font-family: Gilroy;
+    font-size: clamp(14px, 2.5vw, 18px);
+    font-weight: 400;
+    line-height: 130%;
+    opacity: 0.8;
+}
+.comments__bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid rgb(220, 220, 220);
+    padding-top: 10.5px;
+}
+.comments__links {
+
+    color: var(--dark-grey);
+    font-family: Neuzeit;
+    font-size: clamp(16px 2.8vw, 18px);
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.splide__pagination__page.is-active {
+  background: var(--light) !important;
+  border: 1px solid var(--dark-grey);
+}
+.splide__pagination__page {
+  background: var(--dark-grey) !important;
+
+}
+.splide__pagination {
+  bottom: -30px !important;
+}
