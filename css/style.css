@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
   max-width: 100%;
   -webkit-text-size-adjust: none;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 .wrapper {
@@ -181,7 +181,7 @@ body {
 .product__wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 0 0 24px 0;
 }
 .product__wrapper .product__banner {
   padding: 24px 0;
@@ -280,6 +280,7 @@ body {
 .product__wrapper .products__btns {
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
 }
 .product__wrapper .product__btn {
   border-radius: 40px;
@@ -294,7 +295,37 @@ body {
   line-height: 130%;
   text-align: center;
 }
+.product__wrapper .products__discount-banner {
+  display: flex;
+  align-items: center;
+  gap: clamp(30px, 5vw, 55px);
+  margin-bottom: 12px;
+}
+.product__wrapper .products__discount--text {
+  color: rgb(246, 93, 129);
+  font-family: Gilroy;
+  font-size: clamp(12px, 4vw, 18px);
+  font-weight: 500;
+  line-height: 130%;
+}
+.product__wrapper .products__discount--text-big {
+  color: rgb(246, 93, 129);
+  font-family: Gilroy;
+  font-size: clamp(16px, 4vw, 24px);
+  font-weight: 700;
+  line-height: 110%;
+}
+.product__wrapper .products__pays {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+@media (max-width: 375px) {
+  .products__pay svg {
+    width: 52.5px;
+  }
+}
 .splide__slide img {
   display: flex;
   justify-content: center;
@@ -349,4 +380,230 @@ body {
   .splide__track--nav > .splide__list > .splide__slide.is-active {
     border-radius: 20px;
   }
+}
+.info {
+  margin-bottom: clamp(24px, 4vw, 44px);
+}
+.info .info__wrapper {
+  border-radius: 30px;
+  background: rgb(247, 247, 247);
+  padding: 15px;
+}
+.info .info__top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.info .presens-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.info .presens-info__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info .presens-info__title {
+  color: var(--dark-grey);
+  font-family: Neuzeit;
+  font-size: clamp(14px, 2vw, 22px);
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.info .presens-info__text {
+  color: var(--dark-grey);
+  opacity: 0.7;
+  font-family: Gilroy;
+  font-size: clamp(14px, 2vw, 22px);
+  font-weight: 400;
+  line-height: 130%;
+}
+.info .line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(220, 220, 220);
+  margin: 16px 0;
+}
+.info .info__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vw, 20px);
+}
+.info .pro-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.info .pro-info__title {
+  color: var(--dark-grey);
+  font-family: Neuzeit;
+  font-size: clamp(14px, 2.4vw, 24px);
+  font-weight: 700;
+  line-height: 110%;
+}
+.info .pro-info__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.info .pro-info__list li {
+  color: var(--dark-grey);
+  font-family: Gilroy;
+  font-size: clamp(14px, 2.4vw, 24px);
+  font-weight: 400;
+  line-height: 130%;
+  opacity: 0.8;
+}
+.info .pro-info__list--main li {
+  color: var(--dark-grey);
+  font-family: Gilroy;
+  font-size: clamp(14px, 2.4vw, 24px);
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.tasks .accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.tasks .accordion-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  padding: 15px;
+  align-items: start;
+  border-radius: 30px;
+  border: 1px solid rgb(98, 98, 98);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.tasks .accordion-item.active {
+  gap: 21px;
+}
+.tasks .accordion__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: all 0.5s ease 0s;
+}
+.tasks .accordion__title .text {
+  color: var(--dark-grey);
+  font-family: Neuzeit;
+  font-size: clamp(14px, 2.4vw, 20px);
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-left: 10px;
+  margin-right: auto;
+}
+.tasks .open-btn {
+  display: block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--dark-grey);
+  position: relative;
+  z-index: 3;
+}
+.tasks .span-1 {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 8px;
+  width: 16px;
+  height: 2px;
+  background-color: var(--light);
+}
+.tasks .span-2 {
+  position: absolute;
+  z-index: 5;
+  top: 8px;
+  left: 50%;
+  width: 2px;
+  height: 16px;
+  background-color: var(--light);
+}
+.tasks .accordion-item.active .span-2 {
+  display: none;
+}
+.tasks .accordion__text {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: all 0.5s ease 0s;
+  margin: 0 auto;
+  color: var(--dark-grey);
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  opacity: 0.8;
+}
+.tasks .accordion-item.active {
+  background-size: cover;
+  transition: all 0.5s ease 0s;
+}
+.tasks .accordion-item.active .accordion__text {
+  grid-template-rows: 1fr;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+  margin-right: clamp(20px, 2vw, 60px);
+}
+.tasks .spoiler__arrow {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  margin-right: 10px;
+}
+.tasks .arrow {
+  display: block;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  z-index: 3;
+  margin-left: 130px;
+}
+.tasks .arrow span {
+  position: absolute;
+  background-color: var(--contrast-color);
+  left: 0;
+  width: 120%;
+  height: 3px;
+  top: 10px;
+  transition: all 0.3s ease 0s;
+  transform: rotate(-45deg);
+}
+.tasks .arrow::before,
+.tasks .arrow::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  background-color: var(--contrast-color);
+  height: 3px;
+  transition: all 0.5s ease 0s;
+}
+.tasks .arrow::before {
+  top: 0;
+}
+.tasks .arrow::after {
+  top: 12px;
+  margin-left: 13px;
+  transform: rotate(-90deg);
+}
+.tasks .accordion-item.active .arrow::before {
+  right: 10px;
+  top: 10px;
+  transform: rotate(-90deg);
+}
+.tasks .accordion-item.active .arrow::after {
+  top: 22px;
+  right: -2px;
+  transform: rotate(0deg);
+}
+
+.footer {
+  height: 100px;
 }/*# sourceMappingURL=style.css.map */
