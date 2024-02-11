@@ -27,6 +27,100 @@ document.addEventListener( 'DOMContentLoaded', function () {
   } );
 
 
+
+  document.addEventListener( 'DOMContentLoaded', function () {
+    var main = new Splide( '#main-carousel-2', {
+      type      : 'fade',
+      rewind    : true,
+      pagination: false,
+      arrows    : false,
+    } );
+  
+    var thumbnails = new Splide( '#thumbnail-carousel-2', {
+      fixedWidth  : 116,
+      fixedHeight : 116,
+      gap         : 10,
+      rewind      : true,
+      pagination  : false,
+      isNavigation: true,
+      breakpoints : {
+        401: {
+          fixedWidth : 85,
+          fixedHeight: 85,
+        },
+      },
+    } );
+  
+    main.sync( thumbnails );
+    main.mount();
+    thumbnails.mount();
+  } );
+
+
+
+
+
+  document.addEventListener( 'DOMContentLoaded', function () {
+    var main = new Splide( '#main-carousel-3', {
+      type      : 'fade',
+      rewind    : true,
+      pagination: false,
+      arrows    : false,
+    } );
+  
+    var thumbnails = new Splide( '#thumbnail-carousel-3', {
+      fixedWidth  : 116,
+      fixedHeight : 116,
+      gap         : 10,
+      rewind      : true,
+      pagination  : false,
+      isNavigation: true,
+      breakpoints : {
+        401: {
+          fixedWidth : 85,
+          fixedHeight: 85,
+        },
+      },
+    } );
+  
+    main.sync( thumbnails );
+    main.mount();
+    thumbnails.mount();
+  } );
+
+
+
+
+
+  document.addEventListener( 'DOMContentLoaded', function () {
+    var main = new Splide( '#main-carousel-4', {
+      type      : 'fade',
+      rewind    : true,
+      pagination: false,
+      arrows    : false,
+    } );
+  
+    var thumbnails = new Splide( '#thumbnail-carousel-4', {
+      fixedWidth  : 116,
+      fixedHeight : 116,
+      gap         : 10,
+      rewind      : true,
+      pagination  : false,
+      isNavigation: true,
+      breakpoints : {
+        401: {
+          fixedWidth : 85,
+          fixedHeight: 85,
+        },
+      },
+    } );
+  
+    main.sync( thumbnails );
+    main.mount();
+    thumbnails.mount();
+  } );
+
+
   let colorTab = function () {
     let colorTabNav = document.querySelectorAll('.product__color'),
       colorTabContent = document.querySelectorAll('.slider-list'),
@@ -51,7 +145,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
       });
   
       colorTabContent.forEach(item => {
-        item.style.animation = 'fadein 1s ease';
+         item.style.animation = 'fadein 1s ease';
       });
     }
   };
