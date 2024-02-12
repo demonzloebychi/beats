@@ -326,9 +326,9 @@ body {
   gap: clamp(5px, 2vw, 25px)
 }
 
-@media (max-width: 375px) {
+@media (max-width: 415px) {
   .products__pay svg {
-    width: 52.5px;
+    width: 54px;
   }
 }
 .splide__slide img {
