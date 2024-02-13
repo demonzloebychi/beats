@@ -195,7 +195,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 
 
-  let date = new Date('Feb 13 2024 00:00:00');
+  let date = new Date('Feb 14 2024 00:00:00');
 
   function counts(){
     let now = new Date();
